@@ -1,0 +1,370 @@
+# Web Development Code Guide - NPA Level 5
+## Simple Explanations for Beginners
+
+---
+
+## 📌 HTML (HyperText Markup Language)
+**What is HTML?** HTML is the skeleton of a website. It tells the browser what content to show.
+
+### Essential HTML Tags Explained:
+
+| Tag | What It Does | Example | Purpose |
+|-----|------------|---------|---------|
+| `<!DOCTYPE html>` | Tells browser this is HTML5 | `<!DOCTYPE html>` | Must be first line - tells browser the file type |
+| `<html lang="en">` | Root tag for entire page | `<html lang="en">` | Wraps all content; `lang="en"` means English language |
+| `<head>` | Invisible section (not shown on page) | `<head>...</head>` | Contains metadata, title, links to CSS files |
+| `<title>` | Browser tab name | `<title>Home - Loch Quarry</title>` | Shows in browser tab |
+| `<meta>` | Information about the page | `<meta charset="UTF-8">` | Gives browser instructions |
+| `<body>` | Visible page content | `<body>...</body>` | Everything user sees goes here |
+| `<header>` | Top section (logo, nav) | `<header>...</header>` | Navigation area at top |
+| `<nav>` | Navigation menu | `<nav>...</nav>` | Links to other pages |
+| `<h1>, <h2>, <h3>` | Headings (big titles) | `<h1>Main Title</h1>` | `<h1>` = biggest, `<h3>` = smaller |
+| `<p>` | Paragraph (text) | `<p>This is text</p>` | Regular paragraph text |
+| `<button>` | Clickable button | `<button>Click Me</button>` | User can click to do something |
+| `<a>` | Link to another page | `<a href="page.html">Click</a>` | Creates clickable link |
+| `<section>` | Groups related content | `<section>...</section>` | Organizes page into sections |
+| `<div>` | Generic container | `<div>...</div>` | Groups elements for styling |
+| `<footer>` | Bottom section | `<footer>...</footer>` | Copyright, contact info at bottom |
+
+---
+
+## 🔍 Meta Tags Breakdown (What's in Your `<head>`)
+
+### 1. Character Encoding
+```html
+<meta charset="UTF-8">
+```
+- **What it does:** Tells browser to read special characters correctly (é, ñ, 中文, emojis 🏕️)
+- **Why it matters:** Without it, text displays as garbage (☃☢☎)
+- **Simple explanation:** Like telling someone "speak English, not Alien"
+
+### 2. Viewport (for Mobile)
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+- **What it does:** Makes page look good on phones, tablets, and computers
+- **Why it matters:** Website adapts to screen size
+- **Simple explanation:** Like auto-fit on a photo to fit any screen
+
+### 3. Description (for Search Engines)
+```html
+<meta name="description" content="Loch Quarry Outdoor Center - Your destination...">
+```
+- **What it does:** Summary shown in Google search results
+- **Why it matters:** Helps people know what your site is about before clicking
+
+### 4. Author
+```html
+<meta name="author" content="Loch Quarry">
+```
+- **What it does:** Says who created the website
+- **Why it matters:** Good for credit and SEO
+
+---
+
+## 🎨 CSS (Cascading Style Sheets)
+**What is CSS?** CSS makes HTML look pretty. HTML is the skeleton, CSS is the clothing and makeup.
+
+### How CSS Works:
+```css
+selector {
+    property: value;
+}
+```
+
+**Example:**
+```css
+h1 {
+    color: blue;
+    font-size: 24px;
+}
+```
+This means: "Make all `<h1>` headings blue and 24 pixels big"
+
+### Essential CSS Properties You'll Use:
+
+| Property | What It Does | Example | Result |
+|----------|------------|---------|--------|
+| `color` | Text color | `color: red;` | Text turns red |
+| `background-color` | Background color | `background-color: yellow;` | Yellow background |
+| `font-size` | Text size | `font-size: 20px;` | Text gets bigger |
+| `font-family` | Text style | `font-family: Arial;` | Uses Arial font |
+| `width` | Element width | `width: 300px;` | Makes element 300 pixels wide |
+| `height` | Element height | `height: 100px;` | Makes element 100 pixels tall |
+| `padding` | Space inside | `padding: 10px;` | 10px space inside element |
+| `margin` | Space outside | `margin: 20px;` | 20px space outside element |
+| `border` | Border line | `border: 2px solid black;` | Black line around element |
+| `display` | How element appears | `display: flex;` | Flexible layout (modern, smart) |
+| `text-align` | Text position | `text-align: center;` | Centers text |
+| `background-image` | Background picture | `background-image: url('pic.jpg');` | Adds background image |
+
+### CSS Classes (Reusable Styles)
+```html
+<!-- HTML -->
+<button class="cta-button">Click Me</button>
+
+<!-- CSS -->
+.cta-button {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+```
+**`.cta-button`** = class name (reusable style)
+**`CTA`** = "Call To Action" (button encouraging user to click)
+
+### CSS Grid (for Layouts)
+```css
+.feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* 2 equal columns */
+    gap: 20px;  /* 20px space between items */
+}
+```
+**This creates a 2-column layout** that looks like:
+```
+[Card 1]  [Card 2]
+[Card 3]  [Card 4]
+```
+
+### Responsive Design (Mobile-Friendly)
+```css
+/* Large screens (desktop) */
+.feature-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;  /* 4 columns */
+}
+
+/* Small screens (mobile) */
+@media (max-width: 768px) {
+    .feature-grid {
+        grid-template-columns: 1fr;  /* 1 column */
+    }
+}
+```
+**Translation:** "On big screens show 4 columns, on small screens show 1 column"
+
+---
+
+## ⚙️ JavaScript (JavaScript)
+**What is JavaScript?** JavaScript makes websites interactive. It responds to user clicks, shows/hides things, validates forms, etc.
+
+### How JavaScript Works:
+JavaScript waits for something to happen (event), then does something.
+
+### Essential JavaScript Events:
+
+| Event | Triggers When | Example |
+|-------|--------------|---------|
+| `onclick` | User clicks | `<button onclick="alert('Clicked!')">Click</button>` |
+| `onload` | Page finishes loading | `<body onload="startPage()">` |
+| `onchange` | User changes input | `<input onchange="updateValue()">` |
+| `onmouseover` | Mouse moves over | `<div onmouseover="highlight()">` |
+| `onsubmit` | Form is submitted | `<form onsubmit="checkForm()">` |
+
+### Example from Your Code:
+```html
+<button class="cta-button" onclick="window.location.href='activities.html'">
+    Explore Activities
+</button>
+```
+
+**Translation:**
+- **`onclick`** = When user clicks this button
+- **`window.location.href`** = Go to a new page
+- **`'activities.html'`** = The page to go to
+
+**Result:** Clicking button takes you to activities page
+
+### Common JavaScript Tasks:
+
+```javascript
+// 1. Show Alert Message
+onclick="alert('Hello!')"
+
+// 2. Go to New Page
+onclick="window.location.href='page.html'"
+
+// 3. Validate Form (check if user filled it)
+onsubmit="return checkForm()"
+
+// 4. Show/Hide Element
+onclick="toggleMenu()"
+
+// 5. Get User Input
+const userName = document.getElementById('name').value;
+
+// 6. Change Text Color
+document.getElementById('heading').style.color = 'red';
+```
+
+---
+
+## 📝 Your HTML Page Breakdown
+
+### `<head>` Section (Invisible)
+```html
+<head>
+    <!-- Tells browser it's UTF-8 (all languages supported) -->
+    <meta charset="UTF-8">
+    
+    <!-- Makes site work on phones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google search result text -->
+    <meta name="description" content="...">
+    
+    <!-- Who made this -->
+    <meta name="author" content="Loch Quarry">
+    
+    <!-- Browser tab title -->
+    <title>Home - Loch Quarry Outdoor Center</title>
+    
+    <!-- Link to CSS file (makes it pretty) -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+```
+
+### `<body>` Section (Visible)
+
+#### Header/Navigation
+```html
+<header>
+    <nav>
+        <h1>🏕️ Loch Quarry Outdoor Center</h1>
+        <ul>  <!-- Unordered List -->
+            <li><a href="index.html">Home</a></li>  <!-- List Item with Link -->
+            <li><a href="services.html">Services</a></li>
+            <!-- More navigation items -->
+        </ul>
+    </nav>
+</header>
+```
+**What it does:** Shows logo and menu at top of page
+
+#### Hero Section (Big Welcome Banner)
+```html
+<section class="hero">
+    <h2>Welcome to Loch Quarry Outdoor Center</h2>
+    <p>Experience the ultimate outdoor adventure...</p>
+    <button class="cta-button" onclick="window.location.href='activities.html'">
+        Explore Activities
+    </button>
+</section>
+```
+**What it does:** Big eye-catching welcome section with call-to-action button
+
+#### Feature Cards (Grid Layout)
+```html
+<div class="feature-grid">
+    <div class="feature-card">
+        <h3>🌊 Water Sports</h3>
+        <p>Premium water activities...</p>
+    </div>
+    <!-- More cards -->
+</div>
+```
+**What it does:** Shows 4 features in a grid (2x2 on desktop, 1 column on mobile)
+
+#### Footer
+```html
+<footer>
+    <p>&copy; 2025 Loch Quarry Outdoor Center. All rights reserved.</p>
+    <p>Contact: info@lochquarry.co.uk | Phone: +44 (0)1234 567890</p>
+</footer>
+```
+**What it does:** Shows copyright and contact info at bottom
+
+---
+
+## 🔗 File Structure Explanation
+```
+loch-quarry-website/
+│
+├── pages/
+│   ├── index.html          ← You are here (home page)
+│   ├── services.html       ← Services page
+│   ├── activities.html     ← Activities page
+│   ├── contact.html        ← Contact form
+│   └── newsletters.html    ← Newsletter signup
+│
+├── css/
+│   └── styles.css          ← All styling (colors, fonts, layout)
+│
+├── js/
+│   └── script.js           ← Interactive features (buttons, forms)
+│
+└── images/                 ← Pictures and icons
+    ├── logo.png
+    ├── hero.jpg
+    └── features/
+```
+
+**`../` Meaning:** Go up one folder
+- `../css/styles.css` = Go up to main folder, then into css folder, then styles.css
+
+---
+
+## 💡 Quick Reference Cheat Sheet
+
+### HTML Basics
+```html
+<!-- Comment: explains code to humans -->
+<tag>Content</tag>              <!-- Most tags need opening & closing -->
+<tag attribute="value">         <!-- Attributes change tag behavior -->
+<tag />                         <!-- Some tags don't need closing -->
+```
+
+### Common Attributes
+```html
+id="name"              <!-- Unique identifier (like a name) -->
+class="category"       <!-- Can be used multiple times -->
+href="page.html"       <!-- Link destination -->
+src="image.jpg"        <!-- Image source file -->
+alt="Description"      <!-- Text if image doesn't load -->
+onclick="doSomething()"<!-- What happens when clicked -->
+style="color: red;"    <!-- Quick inline styling -->
+```
+
+### CSS Units
+```css
+px      /* Pixels (exact size) */
+%       /* Percentage (relative size) */
+em      /* Relative to font size */
+rem     /* Relative to root font size */
+vh/vw   /* Viewport height/width (responsive) */
+```
+
+### Colors
+```css
+color: red;                    /* Named color */
+color: #FF0000;                /* Hex code (red) */
+color: rgb(255, 0, 0);         /* RGB (red) */
+color: rgba(255, 0, 0, 0.5);   /* RGB + transparency (50% see-through) */
+```
+
+---
+
+## 🎓 Learning Tasks for Your Course
+
+1. **Task 1:** Change the button color from blue to green
+2. **Task 2:** Add a new navigation link
+3. **Task 3:** Change hero section background color
+4. **Task 4:** Make feature cards 3 columns instead of 2
+5. **Task 5:** Add JavaScript to show alert when clicking "Explore Activities"
+
+---
+
+## 🚀 Next Steps
+1. Open `styles.css` and understand the CSS rules
+2. Open `script.js` and understand the JavaScript functions
+3. Try changing colors, sizes, and text
+4. Practice by modifying one thing at a time
+5. Always save and refresh browser to see changes
+
+---
+
+**Remember:** Web development = HTML (structure) + CSS (style) + JavaScript (interaction)
+
+Good luck with your NPA Level 5 course! 🎓

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Newsletters - Loch Quarry Outdoor Center">
+    <title>Newsletters - Loch Quarry Outdoor Center</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header>
+        <nav>
+            <h1>🏕️ Loch Quarry Outdoor Center</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="newsletters.html">Newsletters</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h2>Newsletter</h2>
+            <p>Stay updated with the latest news, events, and special offers from Loch Quarry</p>
+        </section>
+
+        <!-- Newsletter Signup -->
+        <section class="newsletter-signup">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Be the first to know about new activities, seasonal events, special promotions, and insider tips for outdoor adventures!</p>
+            
+            <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="interests">Interests (Select all that apply)</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="interests" value="water-sports"> Water Sports</label>
+                        <label><input type="checkbox" name="interests" value="hiking"> Hiking & Trekking</label>
+                        <label><input type="checkbox" name="interests" value="climbing"> Rock Climbing</label>
+                        <label><input type="checkbox" name="interests" value="fishing"> Fishing</label>
+                        <label><input type="checkbox" name="interests" value="camping"> Camping & Bushcraft</label>
+                        <label><input type="checkbox" name="interests" value="photography"> Photography</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label><input type="checkbox" name="agree" required> I agree to receive emails and can unsubscribe at any time</label>
+                </div>
+
+                <button type="submit" class="submit-btn">Subscribe Now</button>
+            </form>
+        </section>
+
+        <!-- Latest News -->
+        <section class="latest-news">
+            <h2>Latest News & Updates</h2>
+
+            <div class="news-item">
+                <h3>🎉 Summer Season 2025 - Now Open!</h3>
+                <p><strong>Posted: November 15, 2025</strong></p>
+                <p>The summer season is now in full swing! Experience perfect weather for all outdoor activities. Book your adventures today and enjoy early-bird discounts of up to 20% on all multi-day packages.</p>
+            </div>
+
+            <div class="news-item">
+                <h3>🏆 New Advanced Climbing Course Launched</h3>
+                <p><strong>Posted: November 8, 2025</strong></p>
+                <p>We're excited to announce our new Advanced Rock Climbing course, perfect for climbers looking to challenge themselves on more technical routes. Classes start November 25th. Limited spaces available!</p>
+            </div>
+
+            <div class="news-item">
+                <h3>🌿 Environmental Initiative: Tree Planting Day</h3>
+                <p><strong>Posted: November 1, 2025</strong></p>
+                <p>Join us for our monthly tree-planting initiative to help restore the local ecosystem. All participants receive a free activity voucher worth £25. Next event: November 24th at 10 AM.</p>
+            </div>
+
+            <div class="news-item">
+                <h3>🎓 Youth Leadership Program</h3>
+                <p><strong>Posted: October 28, 2025</strong></p>
+                <p>Applications are now open for our Youth Leadership Program for ages 16-25. Develop outdoor skills, gain certifications, and help lead activities at the center. Apply before November 30th!</p>
+            </div>
+
+            <div class="news-item">
+                <h3>❄️ Winter Sports Coming Soon</h3>
+                <p><strong>Posted: October 20, 2025</strong></p>
+                <p>As we head into winter, get ready for exciting new activities! We're preparing for ice climbing, winter hiking expeditions, and cozy fireside campfire experiences.</p>
+            </div>
+
+            <div class="news-item">
+                <h3>🎁 Referral Rewards Program</h3>
+                <p><strong>Posted: October 15, 2025</strong></p>
+                <p>Refer a friend and earn rewards! For every friend you bring who books an activity, you both receive £10 off your next booking. No limit to how much you can earn!</p>
+            </div>
+        </section>
+
+        <!-- Newsletter Benefits -->
+        <section class="benefits">
+            <h2>Why Subscribe?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>📰 Exclusive Content</h3>
+                    <p>Get insider stories and behind-the-scenes updates from the center</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>💰 Special Offers</h3>
+                    <p>Receive exclusive discounts and early-bird prices for new activities</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>🗓️ Event Announcements</h3>
+                    <p>Be notified first about seasonal events and new activity launches</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>🎯 Personalized Tips</h3>
+                    <p>Get advice tailored to your interests and skill level</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Loch Quarry Outdoor Center. All rights reserved.</p>
+        <p>Contact: info@lochquarry.co.uk | Phone: +44 (0)1234 567890</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/script.js"></script>
+</body>
+</html>

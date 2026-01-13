@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="80" viewBox="0 0 220 80" role="img" aria-label="Animated activity: boat on water">
+  <title>Boat on Water - Activity</title>
+  <!-- background -->
+  <rect width="100%" height="100%" fill="#e8f6ff" />
+
+  <!-- lake -->
+  <rect x="0" y="44" width="220" height="36" fill="#a7d3ff" />
+
+  <!-- sun -->
+  <circle cx="190" cy="20" r="10" fill="#ffd166">
+    <animate attributeName="cx" values="190;180;190" dur="6s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- boat group -->
+  <g id="boat" transform="translate(-40,0)">
+    <!-- boat hull -->
+    <path d="M0 54 Q18 48 36 54 L34 58 Q18 64 2 58 Z" fill="#6c4f3d" />
+    <!-- boat top -->
+    <rect x="8" y="48" width="20" height="6" rx="3" fill="#8b5e3c" />
+    <!-- person (circle head) -->
+    <circle cx="18" cy="46" r="2.6" fill="#ffd9b3" />
+    <!-- paddle -->
+    <rect x="24" y="50" width="1" height="18" fill="#4d2e1b" transform="rotate(10 24 50)" />
+    <ellipse cx="24" cy="66" rx="4" ry="2" fill="#bfa77a" />
+  </g>
+
+  <!-- animate boat moving left to right and back -->
+  <animate xlink:href="#boat" attributeName="transform" type="translate"
+           values="-40,0; 120,0; -40,0" dur="8s" repeatCount="indefinite" />
+
+  <!-- small water ripples -->
+  <g fill="#9fc9ff" opacity="0.9">
+    <ellipse cx="60" cy="60" rx="8" ry="2" />
+    <ellipse cx="120" cy="62" rx="10" ry="2" />
+    <ellipse cx="180" cy="60" rx="7" ry="2" />
+    <animate attributeName="opacity" values="0.6;0.95;0.6" dur="6s" repeatCount="indefinite" />
+  </g>
+</svg>

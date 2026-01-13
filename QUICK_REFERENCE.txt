@@ -1,0 +1,130 @@
+# Quick Reference Guide
+
+## File Organization Summary
+
+```
+loch-quarry-website/
+│
+├── pages/                    ← All HTML pages here
+│   ├── index.html           (Home)
+│   ├── services.html        (Services)
+│   ├── activities.html      (Activities)
+│   ├── newsletters.html     (Newsletter)
+│   └── contact.html         (Contact)
+│
+├── css/                      ← All styling here
+│   └── styles.css           (Shared CSS for all pages)
+│
+├── js/                       ← All JavaScript here
+│   └── script.js            (Shared JS for all pages)
+│
+└── README.md                 (Project Documentation)
+```
+
+## Opening the Website
+
+Open: `pages/index.html` in your browser
+
+## Making Changes
+
+### To change styling on ALL pages:
+Edit: `css/styles.css`
+
+### To change scripts on ALL pages:
+Edit: `js/script.js`
+
+### To change content on specific page:
+Edit the HTML file in `pages/` folder
+
+## What Each Page Contains
+
+| Page | File | Purpose |
+|------|------|---------|
+| Home | index.html | Welcome, About, Features |
+| Services | services.html | 6 service offerings with pricing |
+| Activities | activities.html | 8 activities with details |
+| Newsletter | newsletters.html | Subscription form + News |
+| Contact | contact.html | Contact info + Contact form + FAQ |
+
+## Key Features
+
+✅ Fully Responsive (Mobile + Tablet + Desktop)
+✅ Form Validation
+✅ Smooth Animations
+✅ Professional Design
+✅ Easy to Customize
+✅ No External Dependencies
+
+## How to Submit for College
+
+1. Keep the entire folder structure as is
+2. Include the README.md file
+3. All files are ready to submit together
+4. Each file serves a specific purpose:
+   - HTML files = Content/Structure
+   - CSS file = Styling/Design
+   - JS file = Functionality/Interactivity
+
+## Common Changes
+
+### Change a button link:
+Find the button in HTML and change the `onclick` value or `href` attribute
+
+### Change colors:
+Find the hex color code in `css/styles.css` and replace it
+
+### Change text/content:
+Edit the text directly in the HTML file
+
+### Add more activities:
+Copy an activity card in `activities.html` and modify it
+
+### Update contact info:
+Edit the contact details in `contact.html`
+
+## Testing
+
+To test:
+1. Open `pages/index.html` in browser
+2. Click through all navigation links
+3. Test buttons and forms
+4. Resize browser to test responsive design
+5. Check console for any errors (F12)
+
+## File Details
+
+### styles.css includes:
+- Global styles
+- Header/navigation
+- Hero sections
+- Card components
+- Forms
+- Buttons
+- Footer
+- Media queries for responsiveness
+
+### script.js includes:
+- Smooth scrolling
+- Page animations
+- Form handling
+- Newsletter validation
+- Contact form validation
+
+### HTML pages include:
+- Proper semantic structure
+- Meta tags
+- Links to CSS and JS files
+- Content sections
+- Forms with proper IDs
+
+## Notes
+
+- All pages share the same CSS and JavaScript
+- This makes updates easier and faster
+- Each page can have unique content
+- Navigation is consistent across all pages
+- Website works without internet connection (no CDN dependencies)
+- All code is optimized for college submission
+
+---
+Ready to submit! 🎓

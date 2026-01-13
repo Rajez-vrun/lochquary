@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Loch Quarry Outdoor Center - Your destination for outdoor adventures">
+    <meta name="author" content="Loch Quarry">
+    <title>Home - Loch Quarry Outdoor Center</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header>
+        <div class="logo-section">
+            <img src="../images/Logo.png" alt="Loch Quarry Logo" class="logo-img">
+            <div class="logo-text">
+                <h1>Loch Quarry Outdoor Center</h1>
+                <p class="tagline">Adventure Awaits in Scotland</p>
+            </div>
+        </div>
+          <div class="hamburger"></div>
+          <span></span>
+          <span></span>
+         <span></span>
+          </div>
+
+        <div class="right-header">
+
+                      <div class="hamburger"></div>
+          <span></span>
+          <span></span>
+         <span></span>
+          </div>
+
+                <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                    <li><a href="newsletters.html">Newsletters</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header media: activity GIF - place your gif in images/ and name it activity-1.gif -->
+            <div class="header-media">
+                <img src="../images/activity-1.svg" alt="Activity 1" class="header-gif">
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h2>Welcome to Loch Quarry Outdoor Center</h2>
+                <p>Loch Quarry Outdoor Centre: Adventure Awaits! Explore, climb, and paddle your way through Scotland's breathtaking landscapes. Land, water, and rope activities for every thrill-seeker.</p>
+                <button class="cta-button" onclick="window.location.href='activities.html'">Explore Activities</button>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Welcome to Loch Quarry Outdoor Centre, your gateway to adventure in the heart of Scotland!</p>
+
+            <p>For over 45 years, since 1978, we've been inspiring individuals, students, young people, school groups, and families to discover the thrill of the great outdoors. Our legacy is built on creating safe, engaging, and unforgettable experiences for every adventurer.
+
+                Whether you're seeking excitement during our vibrant summer sessions or invigorating winter challenges, Loch Quarry offers something unique for everyone. Dive into our diverse range of activities:</p>
+            
+            <ul>
+                <li>Land Adventures: Conquer mountain biking trails, explore scenic hiking routes, and scale rock climbing ascents.</li>
+                <li>Water Adventures: Paddle across stunning lochs with kayaking and canoeing, or try the balance of stand-up paddleboarding.</li>
+                <li>Rope Adventures: Challenge your limits on high ropes courses, thrilling zip lines, and exhilarating abseiling experiences.</li>
+            </ul>
+
+            <p>Our passionate and certified instructors are dedicated to ensuring your safety and maximizing your fun, fostering confidence and a love for nature.</p>
+
+            <p>Join us at Loch Quarry Outdoor Centre – where your next Scottish adventure awaits!</p>
+            </section>
+
+        <!-- Why Choose Us -->
+        <section class="features">
+            <h2>Why Choose Us?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>🌊 Water Sports</h3>
+                    <p>Premium water activities including kayaking, paddleboarding, and swimming</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🥾 Hiking & Trekking</h3>
+                    <p>Guided trails through breathtaking mountain scenery</p>
+                </div>
+                <div class="feature-card">
+                    <h3>👨‍🏫 Expert Instructors</h3>
+                    <p>Certified professionals with years of outdoor experience</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🏆 Safety First</h3>
+                    <p>All equipment meets international safety standards</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Loch Quarry Outdoor Center. All rights reserved.</p>
+        <p>Contact: info@lochquarry.co.uk | Phone: +44 (0)1234 567890</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/script.js"></script>
+    <script>
+    document.querySelector(".hamburger").addEventListener("click", function() {
+    this.classList.toggle("active");
+    document.querySelector("nav").classList.toggle("active");
+});
+</script>
+
+</body>
+</html>

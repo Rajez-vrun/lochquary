@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Web Development Code Guide - NPA Level 5</title>
+    <style>
+        body { font-family: Calibri, Arial, sans-serif; line-height: 1.5; margin: 20px; }
+        h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+        h2 { color: #34495e; margin-top: 30px; border-left: 4px solid #3498db; padding-left: 10px; }
+        h3 { color: #555; }
+        table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+        th, td { border: 1px solid #bbb; padding: 10px; text-align: left; }
+        th { background-color: #3498db; color: white; }
+        tr:nth-child(even) { background-color: #ecf0f1; }
+        code { background-color: #f4f4f4; padding: 2px 5px; border-radius: 3px; font-family: 'Courier New', monospace; }
+        pre { background-color: #f4f4f4; padding: 10px; border-radius: 5px; overflow-x: auto; }
+        .highlight { background-color: #fff9e6; padding: 15px; border-left: 4px solid #f39c12; margin: 15px 0; }
+        strong { color: #2c3e50; }
+    </style>
+</head>
+<body>
+
+<h1>🎓 Web Development Code Guide - NPA Level 5</h1>
+<h2 style="text-align: center;">Simple Explanations for Beginners</h2>
+<hr>
+
+<h2>📌 HTML (HyperText Markup Language)</h2>
+<p><strong>What is HTML?</strong> HTML is the skeleton of a website. It tells the browser what content to show.</p>
+
+<h3>Essential HTML Tags Explained:</h3>
+<table>
+<tr>
+<th>Tag</th>
+<th>What It Does</th>
+<th>Example</th>
+<th>Purpose</th>
+</tr>
+<tr>
+<td><code>&lt;!DOCTYPE html&gt;</code></td>
+<td>Tells browser this is HTML5</td>
+<td><code>&lt;!DOCTYPE html&gt;</code></td>
+<td>Must be first line - tells browser the file type</td>
+</tr>
+<tr>
+<td><code>&lt;html lang="en"&gt;</code></td>
+<td>Root tag for entire page</td>
+<td><code>&lt;html lang="en"&gt;</code></td>
+<td>Wraps all content; lang="en" means English language</td>
+</tr>
+<tr>
+<td><code>&lt;head&gt;</code></td>
+<td>Invisible section (not shown on page)</td>
+<td><code>&lt;head&gt;...&lt;/head&gt;</code></td>
+<td>Contains metadata, title, links to CSS files</td>
+</tr>
+<tr>
+<td><code>&lt;title&gt;</code></td>
+<td>Browser tab name</td>
+<td><code>&lt;title&gt;Home - Loch Quarry&lt;/title&gt;</code></td>
+<td>Shows in browser tab</td>
+</tr>
+<tr>
+<td><code>&lt;meta&gt;</code></td>
+<td>Information about the page</td>
+<td><code>&lt;meta charset="UTF-8"&gt;</code></td>
+<td>Gives browser instructions</td>
+</tr>
+<tr>
+<td><code>&lt;body&gt;</code></td>
+<td>Visible page content</td>
+<td><code>&lt;body&gt;...&lt;/body&gt;</code></td>
+<td>Everything user sees goes here</td>
+</tr>
+<tr>
+<td><code>&lt;header&gt;</code></td>
+<td>Top section (logo, nav)</td>
+<td><code>&lt;header&gt;...&lt;/header&gt;</code></td>
+<td>Navigation area at top</td>
+</tr>
+<tr>
+<td><code>&lt;nav&gt;</code></td>
+<td>Navigation menu</td>
+<td><code>&lt;nav&gt;...&lt;/nav&gt;</code></td>
+<td>Links to other pages</td>
+</tr>
+<tr>
+<td><code>&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;</code></td>
+<td>Headings (big titles)</td>
+<td><code>&lt;h1&gt;Main Title&lt;/h1&gt;</code></td>
+<td>h1 = biggest, h3 = smaller</td>
+</tr>
+<tr>
+<td><code>&lt;p&gt;</code></td>
+<td>Paragraph (text)</td>
+<td><code>&lt;p&gt;This is text&lt;/p&gt;</code></td>
+<td>Regular paragraph text</td>
+</tr>
+<tr>
+<td><code>&lt;button&gt;</code></td>
+<td>Clickable button</td>
+<td><code>&lt;button&gt;Click Me&lt;/button&gt;</code></td>
+<td>User can click to do something</td>
+</tr>
+<tr>
+<td><code>&lt;a&gt;</code></td>
+<td>Link to another page</td>
+<td><code>&lt;a href="page.html"&gt;Click&lt;/a&gt;</code></td>
+<td>Creates clickable link</td>
+</tr>
+<tr>
+<td><code>&lt;section&gt;</code></td>
+<td>Groups related content</td>
+<td><code>&lt;section&gt;...&lt;/section&gt;</code></td>
+<td>Organizes page into sections</td>
+</tr>
+<tr>
+<td><code>&lt;div&gt;</code></td>
+<td>Generic container</td>
+<td><code>&lt;div&gt;...&lt;/div&gt;</code></td>
+<td>Groups elements for styling</td>
+</tr>
+<tr>
+<td><code>&lt;footer&gt;</code></td>
+<td>Bottom section</td>
+<td><code>&lt;footer&gt;...&lt;/footer&gt;</code></td>
+<td>Copyright, contact info at bottom</td>
+</tr>
+</table>
+
+<h2>🔍 Meta Tags Breakdown (What's in Your &lt;head&gt;)</h2>
+
+<h3>1. Character Encoding</h3>
+<pre>&lt;meta charset="UTF-8"&gt;</pre>
+<div class="highlight">
+<strong>What it does:</strong> Tells browser to read special characters correctly (é, ñ, 中文, emojis 🏕️)<br>
+<strong>Why it matters:</strong> Without it, text displays as garbage (☃☢☎)<br>
+<strong>Simple explanation:</strong> Like telling someone "speak English, not Alien"
+</div>
+
+<h3>2. Viewport (for Mobile)</h3>
+<pre>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</pre>
+<div class="highlight">
+<strong>What it does:</strong> Makes page look good on phones, tablets, and computers<br>
+<strong>Why it matters:</strong> Website adapts to screen size<br>
+<strong>Simple explanation:</strong> Like auto-fit on a photo to fit any screen
+</div>
+
+<h3>3. Description (for Search Engines)</h3>
+<pre>&lt;meta name="description" content="Loch Quarry Outdoor Center - Your destination..."&gt;</pre>
+<div class="highlight">
+<strong>What it does:</strong> Summary shown in Google search results<br>
+<strong>Why it matters:</strong> Helps people know what your site is about before clicking
+</div>
+
+<h3>4. Author</h3>
+<pre>&lt;meta name="author" content="Loch Quarry"&gt;</pre>
+<div class="highlight">
+<strong>What it does:</strong> Says who created the website<br>
+<strong>Why it matters:</strong> Good for credit and SEO
+</div>
+
+<h2>🎨 CSS (Cascading Style Sheets)</h2>
+<p><strong>What is CSS?</strong> CSS makes HTML look pretty. HTML is the skeleton, CSS is the clothing and makeup.</p>
+
+<h3>How CSS Works:</h3>
+<pre>selector {
+    property: value;
+}</pre>
+
+<p><strong>Example:</strong></p>
+<pre>h1 {
+    color: blue;
+    font-size: 24px;
+}</pre>
+<p>This means: "Make all <code>&lt;h1&gt;</code> headings blue and 24 pixels big"</p>
+
+<h3>Essential CSS Properties You'll Use:</h3>
+<table>
+<tr>
+<th>Property</th>
+<th>What It Does</th>
+<th>Example</th>
+<th>Result</th>
+</tr>
+<tr>
+<td><code>color</code></td>
+<td>Text color</td>
+<td><code>color: red;</code></td>
+<td>Text turns red</td>
+</tr>
+<tr>
+<td><code>background-color</code></td>
+<td>Background color</td>
+<td><code>background-color: yellow;</code></td>
+<td>Yellow background</td>
+</tr>
+<tr>
+<td><code>font-size</code></td>
+<td>Text size</td>
+<td><code>font-size: 20px;</code></td>
+<td>Text gets bigger</td>
+</tr>
+<tr>
+<td><code>font-family</code></td>
+<td>Text style</td>
+<td><code>font-family: Arial;</code></td>
+<td>Uses Arial font</td>
+</tr>
+<tr>
+<td><code>width</code></td>
+<td>Element width</td>
+<td><code>width: 300px;</code></td>
+<td>Makes element 300 pixels wide</td>
+</tr>
+<tr>
+<td><code>height</code></td>
+<td>Element height</td>
+<td><code>height: 100px;</code></td>
+<td>Makes element 100 pixels tall</td>
+</tr>
+<tr>
+<td><code>padding</code></td>
+<td>Space inside</td>
+<td><code>padding: 10px;</code></td>
+<td>10px space inside element</td>
+</tr>
+<tr>
+<td><code>margin</code></td>
+<td>Space outside</td>
+<td><code>margin: 20px;</code></td>
+<td>20px space outside element</td>
+</tr>
+<tr>
+<td><code>border</code></td>
+<td>Border line</td>
+<td><code>border: 2px solid black;</code></td>
+<td>Black line around element</td>
+</tr>
+<tr>
+<td><code>display</code></td>
+<td>How element appears</td>
+<td><code>display: flex;</code></td>
+<td>Flexible layout (modern, smart)</td>
+</tr>
+<tr>
+<td><code>text-align</code></td>
+<td>Text position</td>
+<td><code>text-align: center;</code></td>
+<td>Centers text</td>
+</tr>
+<tr>
+<td><code>background-image</code></td>
+<td>Background picture</td>
+<td><code>background-image: url('pic.jpg');</code></td>
+<td>Adds background image</td>
+</tr>
+</table>
+
+<h3>CSS Classes (Reusable Styles)</h3>
+<pre>&lt;!-- HTML --&gt;
+&lt;button class="cta-button"&gt;Click Me&lt;/button&gt;
+
+&lt;!-- CSS --&gt;
+.cta-button {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}</pre>
+
+<div class="highlight">
+<code>.cta-button</code> = class name (reusable style)<br>
+<strong>CTA</strong> = "Call To Action" (button encouraging user to click)
+</div>
+
+<h3>CSS Grid (for Layouts)</h3>
+<pre>.feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* 2 equal columns */
+    gap: 20px;  /* 20px space between items */
+}</pre>
+
+<p><strong>This creates a 2-column layout:</strong></p>
+<pre>[Card 1]  [Card 2]
+[Card 3]  [Card 4]</pre>
+
+<h3>Responsive Design (Mobile-Friendly)</h3>
+<pre>/* Large screens (desktop) */
+.feature-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;  /* 4 columns */
+}
+
+/* Small screens (mobile) */
+@media (max-width: 768px) {
+    .feature-grid {
+        grid-template-columns: 1fr;  /* 1 column */
+    }
+}</pre>
+
+<div class="highlight">
+<strong>Translation:</strong> "On big screens show 4 columns, on small screens show 1 column"
+</div>
+
+<h2>⚙️ JavaScript</h2>
+<p><strong>What is JavaScript?</strong> JavaScript makes websites interactive. It responds to user clicks, shows/hides things, validates forms, etc.</p>
+
+<h3>How JavaScript Works:</h3>
+<p>JavaScript waits for something to happen (event), then does something.</p>
+
+<h3>Essential JavaScript Events:</h3>
+<table>
+<tr>
+<th>Event</th>
+<th>Triggers When</th>
+<th>Example</th>
+</tr>
+<tr>
+<td><code>onclick</code></td>
+<td>User clicks</td>
+<td><code>&lt;button onclick="alert('Clicked!')"&gt;Click&lt;/button&gt;</code></td>
+</tr>
+<tr>
+<td><code>onload</code></td>
+<td>Page finishes loading</td>
+<td><code>&lt;body onload="startPage()"&gt;</code></td>
+</tr>
+<tr>
+<td><code>onchange</code></td>
+<td>User changes input</td>
+<td><code>&lt;input onchange="updateValue()"&gt;</code></td>
+</tr>
+<tr>
+<td><code>onmouseover</code></td>
+<td>Mouse moves over</td>
+<td><code>&lt;div onmouseover="highlight()"&gt;</code></td>
+</tr>
+<tr>
+<td><code>onsubmit</code></td>
+<td>Form is submitted</td>
+<td><code>&lt;form onsubmit="checkForm()"&gt;</code></td>
+</tr>
+</table>
+
+<h3>Example from Your Code:</h3>
+<pre>&lt;button class="cta-button" onclick="window.location.href='activities.html'"&gt;
+    Explore Activities
+&lt;/button&gt;</pre>
+
+<div class="highlight">
+<strong>Translation:</strong><br>
+• <code>onclick</code> = When user clicks this button<br>
+• <code>window.location.href</code> = Go to a new page<br>
+• <code>'activities.html'</code> = The page to go to<br>
+<br>
+<strong>Result:</strong> Clicking button takes you to activities page
+</div>
+
+<h3>Common JavaScript Tasks:</h3>
+<pre>// 1. Show Alert Message
+onclick="alert('Hello!')"
+
+// 2. Go to New Page
+onclick="window.location.href='page.html'"
+
+// 3. Validate Form (check if user filled it)
+onsubmit="return checkForm()"
+
+// 4. Show/Hide Element
+onclick="toggleMenu()"
+
+// 5. Get User Input
+const userName = document.getElementById('name').value;
+
+// 6. Change Text Color
+document.getElementById('heading').style.color = 'red';</pre>
+
+<h2>📝 Your HTML Page Breakdown</h2>
+
+<h3>&lt;head&gt; Section (Invisible)</h3>
+<pre>&lt;head&gt;
+    &lt;!-- Tells browser it's UTF-8 (all languages supported) --&gt;
+    &lt;meta charset="UTF-8"&gt;
+    
+    &lt;!-- Makes site work on phones --&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    
+    &lt;!-- Google search result text --&gt;
+    &lt;meta name="description" content="..."&gt;
+    
+    &lt;!-- Who made this --&gt;
+    &lt;meta name="author" content="Loch Quarry"&gt;
+    
+    &lt;!-- Browser tab title --&gt;
+    &lt;title&gt;Home - Loch Quarry Outdoor Center&lt;/title&gt;
+    
+    &lt;!-- Link to CSS file (makes it pretty) --&gt;
+    &lt;link rel="stylesheet" href="../css/styles.css"&gt;
+&lt;/head&gt;</pre>
+
+<h3>&lt;body&gt; Section (Visible)</h3>
+
+<h4>Header/Navigation</h4>
+<pre>&lt;header&gt;
+    &lt;nav&gt;
+        &lt;h1&gt;🏕️ Loch Quarry Outdoor Center&lt;/h1&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="services.html"&gt;Services&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;</pre>
+<p><strong>What it does:</strong> Shows logo and menu at top of page</p>
+
+<h4>Hero Section (Big Welcome Banner)</h4>
+<pre>&lt;section class="hero"&gt;
+    &lt;h2&gt;Welcome to Loch Quarry Outdoor Center&lt;/h2&gt;
+    &lt;p&gt;Experience the ultimate outdoor adventure...&lt;/p&gt;
+    &lt;button class="cta-button" onclick="window.location.href='activities.html'"&gt;
+        Explore Activities
+    &lt;/button&gt;
+&lt;/section&gt;</pre>
+<p><strong>What it does:</strong> Big eye-catching welcome section with call-to-action button</p>
+
+<h4>Feature Cards (Grid Layout)</h4>
+<pre>&lt;div class="feature-grid"&gt;
+    &lt;div class="feature-card"&gt;
+        &lt;h3&gt;🌊 Water Sports&lt;/h3&gt;
+        &lt;p&gt;Premium water activities...&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+<p><strong>What it does:</strong> Shows 4 features in a grid (2x2 on desktop, 1 column on mobile)</p>
+
+<h4>Footer</h4>
+<pre>&lt;footer&gt;
+    &lt;p&gt;&copy; 2025 Loch Quarry Outdoor Center. All rights reserved.&lt;/p&gt;
+    &lt;p&gt;Contact: info@lochquarry.co.uk | Phone: +44 (0)1234 567890&lt;/p&gt;
+&lt;/footer&gt;</pre>
+<p><strong>What it does:</strong> Shows copyright and contact info at bottom</p>
+
+<h2>🔗 File Structure Explanation</h2>
+<pre>loch-quarry-website/
+│
+├── pages/
+│   ├── index.html          ← You are here (home page)
+│   ├── services.html       ← Services page
+│   ├── activities.html     ← Activities page
+│   ├── contact.html        ← Contact form
+│   └── newsletters.html    ← Newsletter signup
+│
+├── css/
+│   └── styles.css          ← All styling (colors, fonts, layout)
+│
+├── js/
+│   └── script.js           ← Interactive features (buttons, forms)
+│
+└── images/                 ← Pictures and icons
+    ├── logo.png
+    ├── hero.jpg
+    └── features/</pre>
+
+<div class="highlight">
+<code>../</code> Meaning: Go up one folder<br>
+• <code>../css/styles.css</code> = Go up to main folder, then into css folder, then styles.css
+</div>
+
+<h2>💡 Quick Reference Cheat Sheet</h2>
+
+<h3>HTML Basics</h3>
+<pre>&lt;!-- Comment: explains code to humans --&gt;
+&lt;tag&gt;Content&lt;/tag&gt;              &lt;!-- Most tags need opening & closing --&gt;
+&lt;tag attribute="value"&gt;         &lt;!-- Attributes change tag behavior --&gt;
+&lt;tag /&gt;                         &lt;!-- Some tags don't need closing --&gt;</pre>
+
+<h3>Common Attributes</h3>
+<pre>id="name"              &lt;!-- Unique identifier (like a name) --&gt;
+class="category"       &lt;!-- Can be used multiple times --&gt;
+href="page.html"       &lt;!-- Link destination --&gt;
+src="image.jpg"        &lt;!-- Image source file --&gt;
+alt="Description"      &lt;!-- Text if image doesn't load --&gt;
+onclick="doSomething()"&lt;!-- What happens when clicked --&gt;
+style="color: red;"    &lt;!-- Quick inline styling --&gt;</pre>
+
+<h3>CSS Units</h3>
+<pre>px      /* Pixels (exact size) */
+%       /* Percentage (relative size) */
+em      /* Relative to font size */
+rem     /* Relative to root font size */
+vh/vw   /* Viewport height/width (responsive) */</pre>
+
+<h3>Colors</h3>
+<pre>color: red;                    /* Named color */
+color: #FF0000;                /* Hex code (red) */
+color: rgb(255, 0, 0);         /* RGB (red) */
+color: rgba(255, 0, 0, 0.5);   /* RGB + transparency (50%) */</pre>
+
+<h2>🎓 Learning Tasks for Your Course</h2>
+<ol>
+<li><strong>Task 1:</strong> Change the button color from blue to green</li>
+<li><strong>Task 2:</strong> Add a new navigation link</li>
+<li><strong>Task 3:</strong> Change hero section background color</li>
+<li><strong>Task 4:</strong> Make feature cards 3 columns instead of 2</li>
+<li><strong>Task 5:</strong> Add JavaScript to show alert when clicking "Explore Activities"</li>
+</ol>
+
+<h2>🚀 Next Steps</h2>
+<ol>
+<li>Open <code>styles.css</code> and understand the CSS rules</li>
+<li>Open <code>script.js</code> and understand the JavaScript functions</li>
+<li>Try changing colors, sizes, and text</li>
+<li>Practice by modifying one thing at a time</li>
+<li>Always save and refresh browser to see changes</li>
+</ol>
+
+<hr>
+<p style="text-align: center; color: #7f8c8d;"><strong>Remember:</strong> Web development = HTML (structure) + CSS (style) + JavaScript (interaction)</p>
+<p style="text-align: center; color: #7f8c8d;">Good luck with your NPA Level 5 course! 🎓</p>
+
+</body>
+</html>
